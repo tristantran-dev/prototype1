@@ -10,7 +10,10 @@ public class Character2DController : MonoBehaviour
     public ProjectileBehavior ProjectilePrefab;
     public Transform LaunchOffset;
 
+    public AudioSource audioPlayer;
+
     private Rigidbody2D _rigidbody;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,5 +37,14 @@ public class Character2DController : MonoBehaviour
         if ( Input.GetButtonDown("Fire1")){
             Instantiate(ProjectilePrefab, LaunchOffset.position, transform.rotation);
         }
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "CollisionTagHit")
+        {
+            audioPlayer.Play();
+        }
+
     }
 }
