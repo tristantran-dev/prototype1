@@ -31,7 +31,7 @@ public class Character2DController : MonoBehaviour
             transform.rotation = movement > 0 ? Quaternion.Euler(0,180,0) : Quaternion.identity;
         }
 
-        if (Input.GetButtonDown("Jump") && (Mathf.Abs(_rigidbody.velocity.y) < 0.001f)){
+        if (Input.GetButtonDown("Vertical") && (Mathf.Abs(_rigidbody.velocity.y) < 0.001f)){
             _rigidbody.AddForce(new Vector2(0,JumpForce), ForceMode2D.Impulse);
         }
 
