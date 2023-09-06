@@ -15,6 +15,7 @@ public class Character2DController : MonoBehaviour
     private Rigidbody2D _rigidbody;
 
     // Start is called before the first frame update
+    //Inspired by Brackey's
     void Start()
     {
       _rigidbody = GetComponent<Rigidbody2D>();

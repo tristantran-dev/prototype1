@@ -1,6 +1,7 @@
 using UnityEngine;
 
 public class ProjectileBehavior : MonoBehaviour
+//Inspired by Brackey's
 {
     public float Speed = 4.5f;
 
