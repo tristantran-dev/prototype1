@@ -37,6 +37,9 @@ public class Character2DController : MonoBehaviour
         if ( Input.GetButtonDown("Fire1")){
             Instantiate(ProjectilePrefab, LaunchOffset.position, transform.rotation);
         }
+        if ( Input.GetKey("escape")){
+            Application.Quit();
+        }
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
